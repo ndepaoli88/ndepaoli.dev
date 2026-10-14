@@ -3,25 +3,33 @@ import Base from '../layouts/Base.astro';
 ---
 <Base description="Il percorso di Nicolò De Paoli: tecnologie Microsoft, Azure e automazione dei processi dal 2010. Casi d'uso e soluzioni da progetti reali.">
 <section class="intro" id="about">
+  <div class="intro-copy">
   <div class="eyebrow">Sviluppatore · Consulente · Architetto software · Imprenditore</div>
   <h1>Nicolò De Paoli<br/><span class="accent">Soluzioni software e automazione dei processi.</span></h1>
   <p class="intro-lead">Dal 2010 progetto e sviluppo soluzioni su misura basate sulle tecnologie Microsoft. Affianco le aziende nell'automazione dei processi e nella riduzione delle attività ripetitive, per consentire alle persone di concentrarsi sul lavoro a maggior valore aggiunto.</p>
   <a class="button primary" href="#writing">Consulta gli articoli →</a>
   <a class="button" href="https://github.com/ndepaoli88" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+  </div>
+  <figure class="portrait"><img src="/images/nicolo-de-paoli.jpg" alt="Ritratto di Nicolò De Paoli" width="800" height="1200" fetchpriority="high" decoding="async" /></figure>
 </section>
 <section class="section biography">
   <div class="eyebrow">Profilo professionale</div>
   <h2>Un percorso tra sviluppo, consulenza e impresa.</h2>
   <p>Il mio percorso professionale è iniziato nel 2010 con uno stage ed è proseguito attraverso collaborazioni a progetto, fino all'attività imprenditoriale. Nel corso degli anni ho assunto responsabilità nello sviluppo software, nella consulenza e nella progettazione di architetture, mantenendo un interesse costante per le nuove tecnologie e le loro applicazioni concrete.</p>
   <p>Lavoro con Microsoft Azure fin dai suoi primi anni. Questa esperienza mi ha permesso di seguirne l'evoluzione e di affrontare sul campo le opportunità e le complessità del cloud, comprese le implicazioni economiche delle scelte tecniche.</p>
+  <p>Le diverse fasi di questo percorso mi hanno portato a osservare il software da più prospettive: il codice da realizzare, l'architettura da progettare e l'esigenza aziendale a cui rispondere. Oggi sviluppo, consulenza e attività imprenditoriale si incontrano nel mio lavoro, con l'obiettivo di collegare le possibilità della tecnologia ai problemi che le aziende devono affrontare.</p>
+  <p>La curiosità per le nuove tecnologie accompagna questo percorso fin dall'inizio. Mi interessa comprenderne le potenzialità e valutarne l'utilità nei progetti: quali esigenze possono soddisfare, quali complessità introducono e quando il loro impiego può offrire un beneficio concreto.</p>
   <h3>Automazione a partire dalle esigenze aziendali.</h3>
   <p>Mi occupo di soluzioni ad hoc nell'ecosistema Microsoft, con particolare attenzione all'automazione dei processi. Il punto di partenza è individuare le attività ripetitive che assorbono tempo senza generare valore aggiunto e valutare come il software possa semplificarle.</p>
   <p>L'obiettivo è ridurre il lavoro manuale e rendere più efficienti le attività operative, attraverso soluzioni costruite sulle esigenze specifiche dell'azienda.</p>
+  <p>Per me, automatizzare significa chiedersi dove il tempo delle persone venga impiegato in operazioni che il software potrebbe svolgere. Una soluzione su misura può alleggerire queste attività e lasciare più spazio all'analisi, alle decisioni e alle competenze che richiedono il contributo umano.</p>
 </section>
 <section class="section blog-purpose">
   <div class="eyebrow">Lo scopo del blog</div>
   <h2>Condividere esperienze e soluzioni applicabili.</h2>
   <p>Questo blog raccoglie casi d'uso e soluzioni sviluppate nei miei progetti. Per ogni approfondimento, l'intento è descrivere il contesto, il problema affrontato, le scelte tecniche e la soluzione adottata, offrendo riferimenti utili a chi incontra esigenze analoghe.</p>
+  <p>Gli articoli partono dall'esperienza nei progetti: un'esigenza da soddisfare, un problema da risolvere o una scelta da valutare. L'obiettivo è spiegare il ragionamento che ha portato alla soluzione, insieme al contesto in cui è stata applicata e agli aspetti da considerare prima di utilizzarla altrove.</p>
+  <p>Mi rivolgo a sviluppatori, consulenti e professionisti che lavorano con le tecnologie Microsoft, ma anche a chi cerca un riferimento per comprendere come il software possa rispondere a una necessità operativa. Voglio che i contenuti offrano un punto di partenza concreto, da adattare alle caratteristiche del proprio progetto.</p>
   <p>La condivisione dell'esperienza è il motivo principale di questo spazio: rendere disponibili conoscenze maturate sul campo, affinché possano aiutare altri professionisti ad affrontare problemi concreti e a individuare soluzioni nei propri progetti.</p>
 </section>
 <section class="section" id="writing"><div class="eyebrow">Esperienze dai progetti</div><h2>Ultimi articoli</h2><div class="cards"><a class="card" href="/blog/welcome/"><div class="tag">INTRODUZIONE · OTT 2026</div><h3>Benvenuti nel mio blog di sviluppo →</h3><p>Gli obiettivi del blog e i temi degli approfondimenti.</p></a><div class="card"><div class="tag">IN ARRIVO</div><h3>Nuovi articoli in arrivo</h3><p>Esperienze pratiche con .NET e Azure, scelte architetturali e lezioni apprese.</p></div></div></section>
@@ -29,8 +37,12 @@ import Base from '../layouts/Base.astro';
 <section class="section"><div class="eyebrow">Contatti</div><h2>Confronto professionale e collaborazioni</h2><p>Per approfondire esigenze legate ad Azure, .NET, architetture software o automazione dei processi.</p><a class="button primary" href="mailto:nicolo@ndepaoli.dev">Contattami →</a></section>
 </Base>
 <style>
-.intro{padding:90px 0 80px;max-width:900px}
-.intro h1{font-size:clamp(2.6rem,6.2vw,4.6rem)}
+.intro{padding:80px 0;display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:48px;align-items:center}
+.intro-copy{min-width:0}
+.portrait{margin:0;overflow:hidden;border-radius:16px;border:1px solid #293a53}
+.portrait img{display:block;width:100%;height:auto}
+@media(max-width:850px){.intro{grid-template-columns:1fr;gap:32px}.portrait{max-width:360px;width:100%;justify-self:center}}
+.intro h1{font-size:clamp(2.3rem,4.4vw,3.5rem)}
 .intro-lead{font-size:1.2rem;max-width:760px}
 .biography p,.blog-purpose p{max-width:780px;font-size:1.05rem}
 .biography h2,.blog-purpose h2{max-width:800px}
